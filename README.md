@@ -45,9 +45,8 @@ $ git pull
 $ yarn version --no-git-tag-version
 $ git commit -am "vX.X.X"
 
-$ # リリースPR作成
-$ gh pr create --web --base main --title "Release vX.X.X"
-$ # マージすると CI により自動で publish されます
+$ git push
+$ # push すると CI により自動で publish されます
 $ # Breaking Changes がある場合など、必要に応じて GitHub の
 $ # Release を作成してリリースノートを書きましょう
 ```
