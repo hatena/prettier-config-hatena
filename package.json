@@ -1,6 +1,6 @@
 {
   "name": "@hatena/prettier-config-hatena",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Shareable Prettier Config for @hatena",
   "main": "index.js",
   "repository": "ssh://git@github.com/hatena/prettier-config-hatena.git",
