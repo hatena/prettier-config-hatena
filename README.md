@@ -4,7 +4,20 @@ Shareable Prettier Config for @hatena
 
 ## インストール
 
+パッケージが GitHub Packages 上でホストされている関係で、インストールするには以下のような手順を踏む必要があります。
+
+1. https://github.com/settings/tokens から `read:packages` にチェックの入ったトークンを発行する
+2. パッケージのインストール先のリポジトリにある `.npmrc` か `~/.npmrc` を以下のように書き換える
+
+```
+//npm.pkg.github.com/:_authToken=<1で発行されたトークンをここに貼る>
+@hatena:registry=https://npm.pkg.github.com/
+```
+
+`.npmrc` を書き換えたら以下のコマンドでインストールできます。
+
 ```bash
+npm install -D @hatena/prettier-config-hatena prettier
 yarn add -D @hatena/prettier-config-hatena prettier
 ```
 
