@@ -17,8 +17,8 @@ module.exports = {
   trailingComma: 'all',
   // 可視性のためブランケットの脇には常にスペースを挿入する
   bracketSpacing: true,
-  // 可視性のため、JSXの `>` は改行せずにタグ名やプロパティと同じ行に挿入する
-  jsxBracketSameLine: true,
+  // 可視性のため、HTML/JSXの `>` は改行せずにタグ名やプロパティと同じ行に挿入する
+  bracketSameLine: true,
   // 引数を括弧を付けること無く増やせるように & 統一性を保つため、アロー関数の引数リストの括弧は必ず付ける
   arrowParens: 'always',
 
