@@ -55,7 +55,7 @@ module.exports = {
 ```console
 $ git switch main
 $ git pull
-$ yarn version --no-git-tag-version
+$ pnpm version --no-git-tag-version
 $ git commit -am "vX.X.X"
 
 $ git push

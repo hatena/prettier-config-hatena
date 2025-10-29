@@ -10,20 +10,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '18.x'
-
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
-
-      - uses: actions/cache@v3
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-
-      - name: yarn install --frozen-lockfile
-        run: yarn install --frozen-lockfile
-
-      - name: yarn run check
-        run: yarn run check
+          cache: 'pnpm'
+      - uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4.2.0
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check
